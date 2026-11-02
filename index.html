@@ -1,0 +1,491 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mark Kirby Benitez | BSIT Portfolio</title>
+  <meta name="description" content="Portfolio of Mark Kirby Benitez, BSIT 3 student interested in web and mobile application development.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style type="text/tailwindcss">
+    @theme inline {
+      --color-bg: var(--bg);
+      --color-surface: var(--surface);
+      --color-ink: var(--ink);
+      --color-muted: var(--muted);
+      --color-line: var(--line);
+      --color-accent: var(--accent);
+      --font-sans: "Space Grotesk", system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", ui-monospace, monospace;
+    }
+
+    :root {
+      color-scheme: light;
+      --bg: #FAF7F2;
+      --surface: #FFFFFF;
+      --ink: #1B1F2A;
+      --muted: #4B5263;
+      --line: #E3DDD2;
+      --accent: #B93C0B;
+    }
+
+    .dark {
+      color-scheme: dark;
+      --bg: #11141B;
+      --surface: #1A1E28;
+      --ink: #EEEAE2;
+      --muted: #B4B9C6;
+      --line: #2B3140;
+      --accent: #FB923C;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5rem;
+    }
+  </style>
+</head>
+
+<body class="bg-bg text-ink font-sans antialiased">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-accent focus:text-bg focus:px-4 focus:py-2 focus:rounded">
+    Skip to content
+  </a>
+
+  <!-- HEADER / NAV -->
+  <header class="sticky top-0 z-40 bg-bg/90 backdrop-blur border-b border-line">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3" aria-label="Main navigation">
+
+      <a href="#home" class="font-mono font-semibold text-lg">
+        mk<span class="text-accent">.</span>benitez
+      </a>
+
+      <ul id="nav-menu" class="hidden absolute top-full inset-x-0 flex-col gap-1 bg-bg border-b border-line p-4 md:static md:flex md:flex-row md:gap-6 md:border-0 md:p-0">
+        <li><a class="block py-2 hover:text-accent" href="#about">About</a></li>
+        <li><a class="block py-2 hover:text-accent" href="#skills">Skills</a></li>
+        <li><a class="block py-2 hover:text-accent" href="#projects">Projects</a></li>
+        <li><a class="block py-2 hover:text-accent" href="#education">Education</a></li>
+        <li><a class="block py-2 hover:text-accent" href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="flex items-center gap-2">
+        <button id="theme-toggle" type="button" class="border border-line rounded-lg px-3 py-2 text-sm font-mono hover:border-accent" aria-label="Switch to dark mode">
+          Dark
+        </button>
+
+        <button id="menu-toggle" type="button" class="md:hidden border border-line rounded-lg px-3 py-2 text-sm font-mono" aria-expanded="false" aria-controls="nav-menu">
+          Menu
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- HOME / HERO -->
+    <section id="home" class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid gap-10 md:grid-cols-2 items-center">
+
+      <div>
+        <p class="font-mono text-accent mb-3">BSIT 3 &middot; Block 5</p>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+          Hi, I'm Mark Kirby Benitez.
+        </h1>
+
+        <p class="mt-5 text-lg text-muted max-w-prose">
+          An IT student interested in web development, mobile applications,
+          and exploring new technologies. I enjoy building projects,
+          solving problems, and improving my programming skills through
+          hands-on experience.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#projects" class="bg-accent text-bg font-semibold px-6 py-3 rounded-lg hover:opacity-90">
+            View my projects
+          </a>
+
+          <a href="#contact" class="border border-line px-6 py-3 rounded-lg hover:border-accent">
+            Contact me
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-surface border border-line rounded-xl p-5 font-mono text-sm leading-relaxed" aria-label="Profile summary card">
+        <p class="text-muted">// profile.js</p>
+        <p><span class="text-accent">const</span> me = {</p>
+        <p class="pl-4">name: "Mark Kirby Benitez",</p>
+        <p class="pl-4">program: "BSIT",</p>
+        <p class="pl-4">year: 3, block: 5,</p>
+        <p class="pl-4">focus: "Web & Mobile Development"</p>
+        <p>};</p>
+      </div>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="max-w-6xl mx-auto px-4 py-14 border-t border-line">
+
+      <h2 class="text-3xl font-bold mb-8">About Me</h2>
+
+      <div class="grid gap-8 md:grid-cols-3 items-start">
+
+        <div class="mx-auto md:mx-0">
+          <img src="images/me.jpg"
+               alt="Portrait photo of Mark Kirby Benitez"
+               width="600"
+               height="600"
+               class="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-accent">
+        </div>
+
+        <div class="md:col-span-2 space-y-4 text-muted">
+
+          <p>
+            I am a Bachelor of Science in Information Technology student
+            at Urdaneta City University. I have experience working on
+            academic projects involving web development, mobile
+            applications, databases, and basic system development.
+            I enjoy exploring new technologies, learning programming
+            concepts, and improving my technical skills.
+          </p>
+
+          <p>
+            <strong class="text-ink">My goals:</strong>
+            My short-term goal is to improve my programming skills,
+            gain more hands-on experience, and become more confident
+            in developing websites and mobile applications.
+            My long-term goal is to become a skilled IT professional
+            and create useful technology solutions that can help
+            people in their everyday lives.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="max-w-6xl mx-auto px-4 py-14 border-t border-line">
+
+      <h2 class="text-3xl font-bold mb-8">Skills</h2>
+
+      <div class="grid gap-6 md:grid-cols-2">
+
+        <article class="bg-surface border border-line rounded-xl p-6">
+          <h3 class="font-bold text-xl mb-4">Technical</h3>
+
+          <ul class="flex flex-wrap gap-2 font-mono text-sm">
+            <li class="border border-line rounded-full px-3 py-1">HTML5</li>
+            <li class="border border-line rounded-full px-3 py-1">CSS3</li>
+            <li class="border border-line rounded-full px-3 py-1">JavaScript</li>
+            <li class="border border-line rounded-full px-3 py-1">PHP</li>
+            <li class="border border-line rounded-full px-3 py-1">Laravel</li>
+            <li class="border border-line rounded-full px-3 py-1">React</li>
+            <li class="border border-line rounded-full px-3 py-1">Flutter</li>
+            <li class="border border-line rounded-full px-3 py-1">Dart</li>
+            <li class="border border-line rounded-full px-3 py-1">Firebase</li>
+            <li class="border border-line rounded-full px-3 py-1">MySQL</li>
+            <li class="border border-line rounded-full px-3 py-1">Git</li>
+            <li class="border border-line rounded-full px-3 py-1">XAMPP</li>
+          </ul>
+        </article>
+
+        <article class="bg-surface border border-line rounded-xl p-6">
+          <h3 class="font-bold text-xl mb-4">Soft Skills</h3>
+
+          <ul class="flex flex-wrap gap-2 font-mono text-sm">
+            <li class="border border-line rounded-full px-3 py-1">Teamwork</li>
+            <li class="border border-line rounded-full px-3 py-1">Problem Solving</li>
+            <li class="border border-line rounded-full px-3 py-1">Communication</li>
+            <li class="border border-line rounded-full px-3 py-1">Adaptability</li>
+            <li class="border border-line rounded-full px-3 py-1">Time Management</li>
+            <li class="border border-line rounded-full px-3 py-1">Willingness to Learn</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="max-w-6xl mx-auto px-4 py-14 border-t border-line">
+
+      <h2 class="text-3xl font-bold mb-6">Projects</h2>
+
+      <div class="flex flex-wrap gap-2 mb-8" role="group" aria-label="Filter projects by category">
+
+        <button type="button" class="filter-btn border border-line rounded-full px-4 py-1.5 text-sm font-mono" data-filter="all" aria-pressed="true">
+          All
+        </button>
+
+        <button type="button" class="filter-btn border border-line rounded-full px-4 py-1.5 text-sm font-mono" data-filter="school" aria-pressed="false">
+          School
+        </button>
+
+        <button type="button" class="filter-btn border border-line rounded-full px-4 py-1.5 text-sm font-mono" data-filter="personal" aria-pressed="false">
+          Personal
+        </button>
+
+        <button type="button" class="filter-btn border border-line rounded-full px-4 py-1.5 text-sm font-mono" data-filter="planned" aria-pressed="false">
+          Planned
+        </button>
+
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+        <!-- PROJECT 1 -->
+        <article class="project bg-surface border border-line rounded-xl p-6 flex flex-col" data-category="personal">
+
+          <h3 class="font-bold text-xl">Benits Workout</h3>
+
+          <p class="text-muted mt-2 grow">
+            A mobile workout application designed to help users
+            explore exercises, follow workout routines, and monitor
+            their fitness progress. This project helps me improve
+            my skills in mobile application development.
+          </p>
+
+          <p class="font-mono text-sm mt-4">
+            Flutter &middot; Dart
+          </p>
+
+          <span class="mt-4 text-accent font-semibold">
+            In Development
+          </span>
+
+        </article>
+
+        <!-- PROJECT 2 -->
+        <article class="project bg-surface border border-line rounded-xl p-6 flex flex-col" data-category="personal">
+
+          <h3 class="font-bold text-xl">Personal Portfolio Website</h3>
+
+          <p class="text-muted mt-2 grow">
+            A personal website that showcases my background,
+            technical skills, projects, and experiences as an
+            Information Technology student.
+          </p>
+
+          <p class="font-mono text-sm mt-4">
+            HTML &middot; CSS &middot; Tailwind CSS &middot; JavaScript
+          </p>
+
+          <span class="mt-4 text-accent font-semibold">
+            Personal Project
+          </span>
+
+        </article>
+
+        <!-- PROJECT 3 -->
+        <article class="project bg-surface border border-line rounded-xl p-6 flex flex-col" data-category="school">
+
+          <h3 class="font-bold text-xl">Student Management System</h3>
+
+          <p class="text-muted mt-2 grow">
+            A school project focused on managing student information
+            and learning how to connect a mobile application to a
+            database through an API.
+          </p>
+
+          <p class="font-mono text-sm mt-4">
+            Flutter &middot; JavaScript &middot; Express.js &middot; Firebase
+          </p>
+
+          <span class="mt-4 text-accent font-semibold">
+            School Project
+          </span>
+
+        </article>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION & EXPERIENCE -->
+    <section id="education" class="max-w-6xl mx-auto px-4 py-14 border-t border-line">
+
+      <h2 class="text-3xl font-bold mb-8">
+        Education &amp; Experience
+      </h2>
+
+      <ol class="border-l-2 border-accent pl-6 space-y-8">
+
+        <li>
+          <p class="font-mono text-sm text-accent">
+            2024 – Present
+          </p>
+
+          <h3 class="font-bold text-xl">
+            Bachelor of Science in Information Technology
+          </h3>
+
+          <p class="text-muted">
+            Urdaneta City University &middot; BSIT 3, Block 5
+          </p>
+        </li>
+
+        <li>
+          <p class="font-mono text-sm text-accent">
+            Academic Experience
+          </p>
+
+          <h3 class="font-bold text-xl">
+            Web and Mobile Application Development
+          </h3>
+
+          <p class="text-muted">
+            Worked on academic activities involving HTML, CSS,
+            JavaScript, PHP, Laravel, React, Flutter, and Dart.
+            Practiced creating web pages, developing application
+            interfaces, and understanding how applications work.
+          </p>
+        </li>
+
+        <li>
+          <p class="font-mono text-sm text-accent">
+            Academic Experience
+          </p>
+
+          <h3 class="font-bold text-xl">
+            Database and System Development
+          </h3>
+
+          <p class="text-muted">
+            Gained experience using Firebase, MySQL, and APIs
+            through school activities. Practiced connecting
+            applications to databases and managing basic
+            application data.
+          </p>
+        </li>
+
+        <li>
+          <p class="font-mono text-sm text-accent">
+            Academic Experience
+          </p>
+
+          <h3 class="font-bold text-xl">
+            IT Troubleshooting and Security
+          </h3>
+
+          <p class="text-muted">
+            Practiced setting up development environments,
+            using XAMPP, testing web applications, and learning
+            basic web security concepts through laboratory
+            activities and hands-on exercises.
+          </p>
+        </li>
+
+      </ol>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="max-w-6xl mx-auto px-4 py-14 border-t border-line">
+
+      <h2 class="text-3xl font-bold mb-8">Contact</h2>
+
+      <div class="grid gap-10 md:grid-cols-2">
+
+        <form id="contact-form" novalidate class="space-y-5">
+
+          <div>
+            <label for="name" class="block font-semibold mb-1">
+              Name
+            </label>
+
+            <input id="name" name="name" type="text"
+                   autocomplete="name"
+                   class="w-full bg-surface border border-line rounded-lg px-3 py-2"
+                   aria-describedby="name-error">
+
+            <p id="name-error" class="text-sm mt-1 text-accent min-h-5"></p>
+          </div>
+
+          <div>
+            <label for="email" class="block font-semibold mb-1">
+              Email
+            </label>
+
+            <input id="email" name="email" type="email"
+                   autocomplete="email"
+                   class="w-full bg-surface border border-line rounded-lg px-3 py-2"
+                   aria-describedby="email-error">
+
+            <p id="email-error" class="text-sm mt-1 text-accent min-h-5"></p>
+          </div>
+
+          <div>
+            <label for="message" class="block font-semibold mb-1">
+              Message
+            </label>
+
+            <textarea id="message" name="message" rows="4"
+                      class="w-full bg-surface border border-line rounded-lg px-3 py-2"
+                      aria-describedby="message-error"></textarea>
+
+            <p id="message-error" class="text-sm mt-1 text-accent min-h-5"></p>
+          </div>
+
+          <button type="submit" class="bg-accent text-bg font-semibold px-6 py-3 rounded-lg hover:opacity-90">
+            Send message
+          </button>
+
+          <p id="form-status" class="font-semibold" role="status"></p>
+
+        </form>
+
+        <!-- FIND ME ONLINE -->
+        <div>
+
+          <h3 class="font-bold text-xl mb-4">
+            Find Me Online
+          </h3>
+
+          <ul class="space-y-3">
+
+            <li>
+              <a class="underline hover:text-accent"
+                 href="mailto:your.email@example.com">
+                Email: your.email@example.com
+              </a>
+            </li>
+
+            <li>
+              <a class="underline hover:text-accent"
+                 href="https://github.com/"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                GitHub: Add your username
+              </a>
+            </li>
+
+            <li>
+              <a class="underline hover:text-accent"
+                 href="https://www.linkedin.com/"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                LinkedIn: Add your profile
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-line py-8 text-center text-sm text-muted">
+    <p>
+      &copy; 2026 Mark Kirby Benitez &middot; BSIT 3 Block 5
+      &middot; Built with HTML, Tailwind CSS and vanilla JavaScript.
+    </p>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
